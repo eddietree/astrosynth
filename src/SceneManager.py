@@ -12,7 +12,7 @@ class SceneManager(Object.Object):
         self.scene = None
 
         self.pushScene(SceneIntro.SceneIntro())
-        self.pushScene(SceneOscillator.SceneOscillator())
+        #self.pushScene(SceneOscillator.SceneOscillator())
         
     def pushScene(self, scene):
         self.stack.append(scene)
