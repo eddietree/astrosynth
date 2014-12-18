@@ -3,25 +3,29 @@ import pygame
 import math
 from Core import *
 
-g_window = 0
 g_core = 0
 
-def init():
+def start():
 
 	pygame.init() 
-	
+
 	global g_core
 	g_core = Core()
 	
-init()
+	quit = False
+	while not quit: 
 
-while True: 
+	   g_core.update()
+	   g_core.draw()
 
-   g_core.update()
-   g_core.draw()
+	   for event in pygame.event.get(): 
+	      if event.type == pygame.QUIT: 
+	        sys.exit(0) 
+	      elif (event.type == pygame.KEYDOWN) and (event.key == pygame.K_ESCAPE):
+	      	quit = True
 
-   for event in pygame.event.get(): 
-      if event.type == pygame.QUIT: 
-          sys.exit(0) 
-      #else: 
-          #print event 
+	      else:
+	        pass
+	        #print event 
+
+start()

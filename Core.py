@@ -1,5 +1,8 @@
 import pygame
 import math
+import Scene
+
+g_window = 0
 
 black = (0,0,0)
 white = (255,255,255)
@@ -14,6 +17,9 @@ class Core:
     	#create the screen
 		global g_window
 		g_window = pygame.display.set_mode((640, 480)) 
+
+		scene = Scene.Scene()
+		scene.update();
 
     def update(self):
     	self._time += 1.0/60.0
