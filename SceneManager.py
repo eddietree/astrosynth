@@ -1,5 +1,6 @@
 import Object
 import SceneIntro
+import Globals
 
 class SceneManager(Object.Object):
     """A simple scene class"""
@@ -30,4 +31,4 @@ class SceneManager(Object.Object):
             self.scene.draw()
 
 def GetSceneItem(id):
-	return g_core.scene_mngr.scene.getItem(id)
+	return Globals.core.scene_mngr.scene.getItem(id)
