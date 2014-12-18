@@ -3,9 +3,6 @@ import math
 import SceneManager
 import Globals
 
-black = (0,0,0)
-white = (255,255,255)
-
 class Core:
     """A simple example class"""
     scene_mngr = None
@@ -34,6 +31,6 @@ class Core:
 
     def draw(self):
         
-    	Globals.window.fill((black))
+    	Globals.window.fill((Globals.BLACK))
         self.scene_mngr.draw()
     	pygame.display.flip() 
