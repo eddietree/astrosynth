@@ -34,7 +34,7 @@ class ItemSine(Item.Item):
         line_width = x_end - x_start
        
         delta_x = line_width * inv_num_segs
-        delta_y = screen_height * 0.15
+        delta_y = screen_height * 0.12
 
         color = Globals.WHITE
 
