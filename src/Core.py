@@ -33,7 +33,7 @@ class Core:
         dt = (ticks - self.ticks) / 1000.0
         self.ticks = ticks
 
-    	Globals.time += 1.0/60.0
+    	Globals.time += dt
         self.scene_mngr.update()
 
     def draw(self):

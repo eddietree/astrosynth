@@ -25,7 +25,6 @@ def start():
 	      	screen_size = event.dict['size']
 	      	Globals.screen_size = screen_size
 	      	core.initWindow()
-	      	print "Changed screen size to: " + screen_size
 
 	      elif (event.type == pygame.KEYDOWN) and (event.key == pygame.K_ESCAPE):
 	      	quit = True
