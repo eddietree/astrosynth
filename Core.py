@@ -16,10 +16,11 @@ class Core:
         title = "ASTRO.SYNTH"
         pygame.display.set_caption(title, title)
 
+        # screen scene manager
         self.scene_mngr = SceneManager.SceneManager()
-		#TODO: add scene
 
     def initWindow(self):
+        
         #create the screen
         flags =  pygame.RESIZABLE | pygame.HWSURFACE | pygame.DOUBLEBUF  # pygame.FULLSCREEN
         Globals.window = pygame.display.set_mode(Globals.screen_size, flags )

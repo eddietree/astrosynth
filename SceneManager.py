@@ -2,7 +2,7 @@ import Object
 import Globals
 
 import SceneIntro
-import SceneSine
+import SceneOscillator
 
 class SceneManager(Object.Object):
     """A simple scene class"""
@@ -12,11 +12,12 @@ class SceneManager(Object.Object):
         self.scene = None
 
         self.pushScene(SceneIntro.SceneIntro())
-        self.pushScene(SceneSine.SceneSine())
+        self.pushScene(SceneOscillator.SceneOscillator())
         
     def pushScene(self, scene):
         self.stack.append(scene)
         self.scene = scene
+        return scene
 
     def popScene(self):
         self.stack.pop()
