@@ -1,6 +1,8 @@
 import Object
-import SceneIntro
 import Globals
+
+import SceneIntro
+import SceneSine
 
 class SceneManager(Object.Object):
     """A simple scene class"""
@@ -10,6 +12,7 @@ class SceneManager(Object.Object):
         self.scene = None
 
         self.pushScene(SceneIntro.SceneIntro())
+        self.pushScene(SceneSine.SceneSine())
         
     def pushScene(self, scene):
         self.stack.append(scene)

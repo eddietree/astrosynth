@@ -16,7 +16,7 @@ class ItemCircle(Item.Item):
         screen_center_y = screen_height * 0.5
         min_dimen = min(screen_width,screen_height)
 
-        line_thickness = 3
+        line_thickness = 2
         num_rings = 6
         rect_width_delta = min_dimen * 0.09
         time = Globals.time * 2.0
