@@ -9,6 +9,9 @@ class Scene(Object.Object):
     def add(self, item, id):
     	self.data[name] = item
 
+    def getItem(self, id):
+        return self.data[id]
+
     def update(self):
     	for key in self.data:
     		self.data[key].update()
@@ -16,6 +19,3 @@ class Scene(Object.Object):
     def draw(self):
     	for key in self.data:
     		self.data[key].draw()
-
-def GetSceneItem(id):
-	return g_core.scene_mngr.scene[id]
