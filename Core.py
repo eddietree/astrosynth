@@ -13,7 +13,7 @@ class Core:
     def __init__(self):
 
     	#create the screen
-		Globals.window = pygame.display.set_mode((640, 480)) 
+		Globals.window = pygame.display.set_mode(Globals.screen_size) 
 
 		self.scene_mngr = SceneManager.SceneManager()
 		#TODO: add scene
