@@ -3,20 +3,18 @@ import pygame
 import math
 from Core import *
 
-g_core = 0
-
 def start():
 
 	pygame.init() 
 
-	global g_core
-	g_core = Core()
+	core = Core()
+	Globals.core = core
 	
 	quit = False
 	while not quit: 
 
-	   g_core.update()
-	   g_core.draw()
+	   core.update()
+	   core.draw()
 
 	   for event in pygame.event.get(): 
 	      if event.type == pygame.QUIT: 

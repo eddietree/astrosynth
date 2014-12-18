@@ -7,7 +7,7 @@ class Scene(Object.Object):
     	self.data = {}
 
     def add(self, item, id):
-    	self.data[name] = item
+    	self.data[id] = item
 
     def getItem(self, id):
         return self.data[id]
