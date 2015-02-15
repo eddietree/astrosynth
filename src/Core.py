@@ -29,11 +29,11 @@ class Core:
     def update(self):
 
         # calc delta time
-        ticks = pygame.time.get_ticks()
-        dt = (ticks - self.ticks) / 1000.0
-        self.ticks = ticks
+        curr_ticks = pygame.time.get_ticks()
+        dt = (curr_ticks - self.ticks) / 1000.0
+        self.ticks = curr_ticks
 
-    	Globals.time += dt
+    	Globals.time += max(dt, 1.0/60.0)
         self.scene_mngr.update()
 
     def draw(self):
